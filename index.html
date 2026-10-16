@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="INFM — Instituto Nacional Federal de Meteorologia. Portal institucional para monitoramento meteorológico, alertas severos, previsão do tempo, radar e clima nacional."
+    />
+    <title>INFM | Instituto Nacional Federal de Meteorologia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="INFM início">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="30" height="30" role="img" aria-label="Logo do INFM">
+              <path d="M8 26 L18 10 L30 18 L24 26 L34 26 L46 14 L56 22 L44 36 L52 48 L38 44 L28 56 L18 48 L28 38 L20 32 Z" fill="none" stroke="#F3C546" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M14 42 C20 33, 28 32, 34 40 C40 31, 49 31, 52 42" fill="none" stroke="#7BE0B4" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M42 14 L49 10 M45 18 L54 12 M16 18 L24 12 M18 28 L26 22" stroke="#98D7FF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 50 C18 46, 26 50, 31 44" fill="none" stroke="#98D7FF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M31 44 L35 38 L39 44" fill="none" stroke="#F3C546" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">INFM</span>
+            <span class="brand-subtitle">Meteorologia Nacional</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#home">Início</a>
+          <a href="#alertas">Alertas</a>
+          <a href="#previsao">Previsão</a>
+          <a href="#radar">Radar</a>
+          <a href="#monitoramento">Severos</a>
+          <a href="#mapa">Brasil</a>
+          <a href="#institucional">Institucional</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#alertas" class="btn btn-secondary">Ver alertas</a>
+          <a href="#radar" class="btn btn-primary">Acompanhar radar</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="demo-notice" role="note">
+        <strong>Demonstração:</strong> os dados meteorológicos deste site são ilustrativos e não
+        são oficiais nem atualizados em tempo real. Não os use para decisões de segurança.
+        <span id="saveStatus" aria-live="polite">Carregando preferências...</span>
+      </div>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Centro nacional de clima e riscos</p>
+            <h1>Informação meteorológica para decisões críticas e seguras.</h1>
+            <p>
+              O INFM atua no monitoramento, análise e alerta de fenômenos meteorológicos severos,
+              com observação técnica, suporte institucional e comunicação clara para o país.
+            </p>
+            <div class="hero-actions">
+              <a href="#previsao" class="btn btn-primary">Consultar previsão</a>
+              <a href="#alertas" class="btn btn-secondary">Central de alertas</a>
+            </div>
+            <ul class="hero-meta">
+              <li>Monitoramento nacional</li>
+              <li>Dados em demonstração</li>
+              <li>Suporte operacional</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Visualização de tempestade severa">
+            <div class="storm-panel">
+              <div class="storm-meter">
+                <span class="pill pill-live">Operação ativa</span>
+                <span class="pill pill-severe">Risco severo</span>
+              </div>
+              <div class="storm-chart" aria-hidden="true">
+                <div class="storm-arc"></div>
+                <div class="storm-line"></div>
+                <div class="storm-wind">
+                  <span class="wind-burst"></span>
+                  <span class="wind-burst"></span>
+                  <span class="wind-burst"></span>
+                  <span class="wind-burst"></span>
+                  <span class="wind-burst"></span>
+                </div>
+              </div>
+              <div class="storm-status">
+                <div class="status-box">
+                  <strong>34°C</strong>
+                  <span>Temp. máxima</span>
+                </div>
+                <div class="status-box">
+                  <strong>68%</strong>
+                  <span>Umidade</span>
+                </div>
+                <div class="status-box">
+                  <strong>72 km/h</strong>
+                  <span>Rajadas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quick-links">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Acesso rápido</p>
+            <h2>Atalhos para operação e gestão de risco</h2>
+          </div>
+          <div class="quick-grid">
+            <a href="#alertas" class="quick-card">
+              <div class="icon-box">⚠️</div>
+              <h3>Alertas</h3>
+              <p>Central com severidade, regiões e recomendações de segurança.</p>
+            </a>
+            <a href="#previsao" class="quick-card">
+              <div class="icon-box">🌤️</div>
+              <h3>Previsão</h3>
+              <p>Consulta por cidade e previsão para os próximos dias.</p>
+            </a>
+            <a href="#radar" class="quick-card">
+              <div class="icon-box">🛰️</div>
+              <h3>Radar</h3>
+              <p>Visualização de precipitação, nuvens e padrões convectivos.</p>
+            </a>
+            <a href="#monitoramento" class="quick-card">
+              <div class="icon-box">🌪️</div>
+              <h3>Severidade</h3>
+              <p>Supercélulas, tornados, granizo e linhas de instabilidade.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="alertas">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Central de alertas</p>
+            <h2>Severidade e zonas de monitoramento</h2>
+          </div>
+
+          <div class="alerts-shell">
+            <div class="filter-bar" aria-label="Filtros de severidade">
+              <button class="filter-btn active" data-filter="all" type="button">Todos</button>
+              <button class="filter-btn" data-filter="severe" type="button">Severos</button>
+              <button class="filter-btn" data-filter="warning" type="button">Atenção</button>
+              <button class="filter-btn" data-filter="watch" type="button">Vigilância</button>
+            </div>
+            <div id="alert-list" class="alert-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="previsao">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Previsão do tempo</p>
+            <h2>Consulta por cidade e tendência climática</h2>
+          </div>
+
+          <div class="forecast-layout">
+            <aside class="panel">
+              <label for="cityInput" style="display:block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 8px;">Local</label>
+              <div class="search-box">
+                <input id="cityInput" type="text" value="São Paulo" placeholder="Digite uma cidade" aria-label="Buscar cidade" />
+                <button id="searchCity" type="button">Buscar</button>
+              </div>
+
+              <div class="city-pills" aria-label="Cidades populares">
+                <button class="city-pill active" type="button" data-city="sp">São Paulo</button>
+                <button class="city-pill" type="button" data-city="rio">Rio</button>
+                <button class="city-pill" type="button" data-city="bh">Belo Horizonte</button>
+                <button class="city-pill" type="button" data-city="rec">Recife</button>
+              </div>
+            </aside>
+
+            <div class="forecast-main">
+              <div class="current-weather">
+                <div class="current-header">
+                  <div>
+                    <p class="eyebrow" style="color: var(--meteor-blue); margin-bottom: 8px;">Condição atual</p>
+                    <h3 id="cityName">São Paulo</h3>
+                    <div id="cityCondition" style="color: var(--slate-600);">Tempestades isoladas</div>
+                  </div>
+                  <div class="temp-block">
+                    <div id="weatherIcon" class="weather-icon" aria-label="Ícone do clima">⛈️</div>
+                    <div id="tempNumber" class="temp-number">25°</div>
+                  </div>
+                </div>
+
+                <div class="weather-meta">
+                  <div class="metric">
+                    <span>Sensação</span>
+                    <strong id="realFeel">28°C</strong>
+                  </div>
+                  <div class="metric">
+                    <span>Umidade</span>
+                    <strong id="humidity">72%</strong>
+                  </div>
+                  <div class="metric">
+                    <span>Chuva</span>
+                    <strong id="rainChance">54%</strong>
+                  </div>
+                  <div class="metric">
+                    <span>Vento</span>
+                    <strong id="wind">31 km/h</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div id="forecast-days" class="forecast-days"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="radar">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Radar meteorológico</p>
+            <h2>Mapa de precipitação e campos de convecção</h2>
+          </div>
+
+          <div class="radar-layout">
+            <div class="radar-panel">
+              <div class="radar-toolbar">
+                <div class="toolbar-group">
+                  <button class="zoom-button" type="button" data-zoom="-1" aria-label="Diminuir zoom">−</button>
+                  <button class="zoom-button" type="button" data-zoom="1" aria-label="Aumentar zoom">+</button>
+                </div>
+                <div class="toolbar-group">
+                  <button class="layer-button active" type="button">Chuva</button>
+                  <button class="layer-button" type="button">Vento</button>
+                  <button class="layer-button" type="button">Nuvens</button>
+                </div>
+              </div>
+
+              <div id="radarCanvas" class="radar-canvas" aria-label="Radar meteorológico em demonstração">
+                <div class="radar-grid"></div>
+                <div class="radar-core"></div>
+                <div class="radar-blip blip-1"></div>
+                <div class="radar-blip blip-2"></div>
+                <div class="radar-blip blip-3"></div>
+                <div class="radar-blip blip-4"></div>
+              </div>
+
+              <div class="radar-legend" aria-label="Legenda de precipitação">
+                <span class="legend-item"><span class="legend-swatch green"></span>Leve</span>
+                <span class="legend-item"><span class="legend-swatch yellow"></span>Moderada</span>
+                <span class="legend-item"><span class="legend-swatch orange"></span>Intensa</span>
+                <span class="legend-item"><span class="legend-swatch red"></span>Severa</span>
+              </div>
+            </div>
+
+            <aside class="radar-summary">
+              <h3>Resumo emissor</h3>
+              <div class="summary-list">
+                <div class="summary-item">
+                  <strong>Região</strong>
+                  <span>Brasil Sudeste e Centro-Oeste</span>
+                </div>
+                <div class="summary-item">
+                  <strong>Frequência</strong>
+                  <span>Intermitente a forte</span>
+                </div>
+                <div class="summary-item">
+                  <strong>Período</strong>
+                  <span>Próximas 6 horas</span>
+                </div>
+                <div class="summary-item">
+                  <strong>Observação</strong>
+                  <span>Dados em demonstração — estrutura pronta para integração real.</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="monitoramento">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Monitoramento severo</p>
+            <h2>Fenômenos com maior potencial de dano</h2>
+          </div>
+
+          <div class="monitoring-grid">
+            <article class="monitor-card supercell">
+              <span class="tag">Supercélula</span>
+              <h3>Rotação intensa</h3>
+              <p>Perfil convectivo com forte sustentação vertical e movimento de mesociclone.</p>
+            </article>
+            <article class="monitor-card tornado">
+              <span class="tag">Tornado</span>
+              <h3>Vórtices de superfície</h3>
+              <p>Condições favoráveis para formação de coluna de ar em instabilidades locais.</p>
+            </article>
+            <article class="monitor-card hail">
+              <span class="tag">Granizo</span>
+              <h3>Pelotas de gelo</h3>
+              <p>Altas camadas de gelo dentro de núcleos de tempestade com forte ascensão.</p>
+            </article>
+            <article class="monitor-card gust">
+              <span class="tag">Rajadas</span>
+              <h3>Ventos repentinos</h3>
+              <p>Fluxos horizontais intensos que elevam risco para árvores, telhados e linhas.</p>
+            </article>
+            <article class="monitor-card instability">
+              <span class="tag">Instabilidade</span>
+              <h3>Linha convectiva</h3>
+              <p>Faixas contínuas de tempestade com potencial para atividade comunitária severa.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mapa">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Mapa nacional</p>
+            <h2>Estado por estado em monitoramento meteorológico</h2>
+          </div>
+
+          <div class="map-wrapper">
+            <div class="brazil-map" aria-label="Mapa do Brasil com estados selecionáveis">
+              <svg class="brazil-shape" viewBox="0 0 420 340" role="img" aria-label="Silhueta estilizada do Brasil">
+                <path d="M96 64 L144 42 L188 52 L230 34 L290 44 L330 70 L352 120 L337 164 L324 186 L332 220 L314 256 L280 286 L236 300 L180 290 L136 268 L98 248 L68 208 L74 160 L62 120 L82 88 Z" fill="rgba(29,117,212,0.78)" stroke="rgba(204,226,247,0.42)" stroke-width="3"/>
+              </svg>
+
+              <button class="state-marker active" data-state="sp" type="button" style="left: 52%; top: 41%;" aria-label="São Paulo"></button>
+              <button class="state-marker" data-state="rj" type="button" style="left: 56%; top: 58%;" aria-label="Rio de Janeiro"></button>
+              <button class="state-marker" data-state="mg" type="button" style="left: 48%; top: 54%;" aria-label="Minas Gerais"></button>
+              <button class="state-marker" data-state="pr" type="button" style="left: 61%; top: 25%;" aria-label="Paraná"></button>
+              <button class="state-marker" data-state="rs" type="button" style="left: 64%; top: 12%;" aria-label="Rio Grande do Sul"></button>
+              <button class="state-marker" data-state="ba" type="button" style="left: 43%; top: 70%;" aria-label="Bahia"></button>
+              <button class="state-marker" data-state="pe" type="button" style="left: 38%; top: 78%;" aria-label="Pernambuco"></button>
+              <button class="state-marker" data-state="ce" type="button" style="left: 30%; top: 62%;" aria-label="Ceará"></button>
+            </div>
+
+            <aside class="map-card">
+              <span id="stateTag" class="status-tag">Monitorado</span>
+              <h3 id="stateTitle">São Paulo</h3>
+              <p id="stateCondition">Instabilidade moderada com granizo e rajadas.</p>
+              <div class="map-stats">
+                <div class="map-stat"><span>Severidade</span><strong id="stateRisk">Nível 3 / Severidade alta</strong></div>
+                <div class="map-stat"><span>Impacto</span><strong id="stateImpact">37% de chance de tempestades isoladas</strong></div>
+                <div class="map-stat"><span>Alerta</span><strong id="stateAlert">Rajadas de até 70 km/h</strong></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="institucional">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Institucional</p>
+            <h2>Um instituto dedicado à ciência, vigilância e proteção</h2>
+          </div>
+
+          <div class="institutional-grid">
+            <div class="institutional-copy">
+              <p>
+                O INFM é uma instituição comprometida com a observação, a análise científica e a
+                comunicação de riscos meteorológicos em escala nacional. Nossa missão é fortalecer a
+                resiliência do país por meio de dados confiáveis, alertas oportunos e orientação técnica.
+              </p>
+              <ul class="mission-list">
+                <li>Monitorar a atmosfera com rigor técnico e manutenção de redes observacionais.</li>
+                <li>Produzir alertas e recomendações para reduzir impactos em populações e infraestrutura.</li>
+                <li>Preservar a qualidade da informação meteorológica como ferramenta de planejamento.</li>
+              </ul>
+            </div>
+
+            <div class="institutional-box">
+              <p class="eyebrow" style="color: var(--meteor-blue);">Missão e objetivos</p>
+              <div class="objective-box">
+                <div class="objective-item">
+                  <strong>24/7</strong>
+                  <span>Monitoramento</span>
+                </div>
+                <div class="objective-item">
+                  <strong>12+</strong>
+                  <span>Regiões de atenção</span>
+                </div>
+                <div class="objective-item">
+                  <strong>98%</strong>
+                  <span>Disponibilidade de dados</span>
+                </div>
+                <div class="objective-item">
+                  <strong>100%</strong>
+                  <span>Foco em segurança</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="30" height="30" role="img" aria-label="Logo do INFM">
+                  <path d="M8 26 L18 10 L30 18 L24 26 L34 26 L46 14 L56 22 L44 36 L52 48 L38 44 L28 56 L18 48 L28 38 L20 32 Z" fill="none" stroke="#F3C546" stroke-width="2.4" stroke-linejoin="round"/>
+                  <path d="M14 42 C20 33, 28 32, 34 40 C40 31, 49 31, 52 42" fill="none" stroke="#7BE0B4" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M42 14 L49 10 M45 18 L54 12 M16 18 L24 12 M18 28 L26 22" stroke="#98D7FF" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight: 800; letter-spacing: 0.06em; color: #fff;">INFM</div>
+                <div style="font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.68);">Instituto Nacional Federal de Meteorologia</div>
+              </div>
+            </div>
+            <p class="footer-copy">
+              Portal institucional para monitoramento meteorológico, alertas severos e suporte técnico à tomada de decisão pública e privada.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Institucional</h4>
+            <ul>
+              <li><a href="#institucional">Sobre o INFM</a></li>
+              <li><a href="#home">Missão</a></li>
+              <li><a href="#monitoramento">Monitoramento</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#alertas">Alertas</a></li>
+              <li><a href="#previsao">Previsão</a></li>
+              <li><a href="#radar">Radar</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+              <li><span>+55 (61) 0000-0000</span></li>
+              <li><span>contato@infm.gov.br</span></li>
+              <li><span>Brasília, DF</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span id="currentYear">2026</span> INFM — Instituto Nacional Federal de Meteorologia</span>
+          <span>Dados em demonstração para apresentação estática</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
