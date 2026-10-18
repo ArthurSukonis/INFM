@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Notícias e análises meteorológicas do INFM, com matérias baseadas em fontes oficiais e relatórios verificáveis." />
+    <title>Notícias | INFM</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="noticias.css" />
+  </head>
+  <body class="news-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../#top" class="brand" aria-label="INFM início">
+          <span class="brand-mark" aria-hidden="true"><strong>INFM</strong></span>
+          <span class="brand-text"><span class="brand-title">INFM</span><span class="brand-subtitle">Meteorologia Nacional</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="../#home">Início</a><a href="../#alertas">Alertas</a><a href="../#previsao">Previsão</a><a href="./" aria-current="page">Notícias</a>
+        </nav>
+        <div class="header-actions"><a href="../#previsao" class="btn btn-primary">Consultar previsão</a></div>
+      </div>
+    </header>
+    <div class="news-masthead">
+      <div class="container">
+        <p class="news-kicker">INFM · Jornalismo meteorológico independente</p>
+        <h1>Notícias</h1>
+        <p>Fenômenos, previsões e ciência do tempo com fontes identificadas.</p>
+      </div>
+    </div>
+    <main class="news-main">
+      <div class="container">
+        <section id="featured-story" class="featured-story" aria-labelledby="featured-title">
+          <div id="featured-image" class="featured-story__image"></div>
+          <div class="featured-story__copy">
+            <span id="featured-category" class="story-category"></span>
+            <h2 id="featured-title"></h2>
+            <p id="featured-summary"></p>
+            <div id="featured-date" class="story-meta"></div>
+            <a id="featured-link" class="news-link-button" href="#">Ler notícia</a>
+          </div>
+        </section>
+        <section aria-label="Pesquisar e filtrar notícias">
+          <div class="news-toolbar">
+            <form id="news-search" class="news-search" role="search">
+              <label for="news-search-input">Pesquisar notícias</label>
+              <input id="news-search-input" type="search" placeholder="Pesquisar notícias" autocomplete="off" />
+              <button type="submit">Buscar</button>
+            </form>
+            <div class="news-results-count" aria-live="polite"><span id="news-result-count"></span> · mais recentes primeiro</div>
+          </div>
+          <div id="news-categories" class="news-categories" aria-label="Filtrar por categoria"></div>
+        </section>
+        <section aria-labelledby="news-list-title">
+          <div class="news-section-heading">
+            <h2 id="news-list-title">Últimas notícias</h2>
+          </div>
+          <div id="news-results" class="story-grid" aria-live="polite"></div>
+          <div class="load-more-wrap"><button id="news-load-more" class="load-more-button" type="button" hidden>Carregar mais</button></div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="container footer-bottom"><span>INFM é um projeto independente e não representa o INMET nem órgãos governamentais.</span><a href="../#top">Voltar ao site institucional</a></div></footer>
+    <script type="module" src="noticias.js"></script>
+  </body>
+</html>

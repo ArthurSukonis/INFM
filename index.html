@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="INFM — Instituto Nacional Federal de Meteorologia. Portal institucional para monitoramento meteorológico, alertas severos, previsão do tempo, radar e clima nacional."
+      content="INFM é um projeto independente de informação meteorológica, com notícias, previsão via Open-Meteo e ferramentas demonstrativas. Não representa o INMET nem órgãos governamentais."
     />
-    <title>INFM | Instituto Nacional Federal de Meteorologia</title>
+    <title>INFM | Portal independente de informação meteorológica</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -37,6 +37,7 @@
           <a href="#radar">Radar</a>
           <a href="#monitoramento">Severos</a>
           <a href="#mapa">Brasil</a>
+          <a href="noticias/">Notícias</a>
           <a href="#institucional">Institucional</a>
         </nav>
 
@@ -49,35 +50,34 @@
 
     <main id="top">
       <div class="demo-notice" role="note">
-        <strong>Demonstração:</strong> os dados meteorológicos deste site são ilustrativos e não
-        são oficiais nem atualizados em tempo real. Não os use para decisões de segurança.
+        <strong>Importante:</strong> alertas, radar e monitoramento são ilustrativos. Previsões e respostas do assistente usam dados do Open-Meteo, não são alertas oficiais e não substituem orientações da Defesa Civil.
         <span id="saveStatus" aria-live="polite">Carregando preferências...</span>
       </div>
       <section class="hero" id="home">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Centro nacional de clima e riscos</p>
-            <h1>Informação meteorológica para decisões críticas e seguras.</h1>
+            <p class="eyebrow">Projeto independente de meteorologia</p>
+            <h1>Informação sobre o tempo, fenômenos e fontes confiáveis.</h1>
             <p>
-              O INFM atua no monitoramento, análise e alerta de fenômenos meteorológicos severos,
-              com observação técnica, suporte institucional e comunicação clara para o país.
+              O portal reúne notícias meteorológicas, consulta de previsão via Open-Meteo e conteúdo
+              educativo. Não é órgão público nem emite alertas meteorológicos oficiais.
             </p>
             <div class="hero-actions">
               <a href="#previsao" class="btn btn-primary">Consultar previsão</a>
-              <a href="#alertas" class="btn btn-secondary">Central de alertas</a>
+              <a href="#alertas" class="btn btn-secondary">Alertas demonstrativos</a>
             </div>
             <ul class="hero-meta">
-              <li>Monitoramento nacional</li>
-              <li>Dados em demonstração</li>
-              <li>Suporte operacional</li>
+              <li>Projeto independente</li>
+              <li>Fontes identificadas</li>
+              <li>Ferramentas demonstrativas</li>
             </ul>
           </div>
 
           <div class="hero-visual" aria-label="Visualização de tempestade severa">
             <div class="storm-panel">
               <div class="storm-meter">
-                <span class="pill pill-live">Operação ativa</span>
-                <span class="pill pill-severe">Risco severo</span>
+                <span class="pill pill-live">Painel demonstrativo</span>
+                <span class="pill pill-severe">Dados ilustrativos</span>
               </div>
               <div class="storm-chart" aria-hidden="true">
                 <div class="storm-arc"></div>
@@ -113,13 +113,13 @@
         <div class="container">
           <div class="section-header">
             <p class="eyebrow">Acesso rápido</p>
-            <h2>Atalhos para operação e gestão de risco</h2>
+            <h2>Atalhos para notícias e recursos meteorológicos</h2>
           </div>
           <div class="quick-grid">
             <a href="#alertas" class="quick-card">
               <div class="icon-box">⚠️</div>
               <h3>Alertas</h3>
-              <p>Central com severidade, regiões e recomendações de segurança.</p>
+              <p>Painel ilustrativo com categorias de risco e orientações gerais.</p>
             </a>
             <a href="#previsao" class="quick-card">
               <div class="icon-box">🌤️</div>
@@ -129,7 +129,7 @@
             <a href="#radar" class="quick-card">
               <div class="icon-box">🛰️</div>
               <h3>Radar</h3>
-              <p>Visualização de precipitação, nuvens e padrões convectivos.</p>
+              <p>Representação demonstrativa, sem dados de radar ao vivo.</p>
             </a>
             <a href="#monitoramento" class="quick-card">
               <div class="icon-box">🌪️</div>
@@ -143,8 +143,8 @@
       <section class="section" id="alertas">
         <div class="container">
           <div class="section-header">
-            <p class="eyebrow">Central de alertas</p>
-            <h2>Severidade e zonas de monitoramento</h2>
+            <p class="eyebrow">Demonstração</p>
+            <h2>Exemplos de categorias de severidade</h2>
           </div>
 
           <div class="alerts-shell">
@@ -188,35 +188,52 @@
                   <div>
                     <p class="eyebrow" style="color: var(--meteor-blue); margin-bottom: 8px;">Condição atual</p>
                     <h3 id="cityName">São Paulo</h3>
-                    <div id="cityCondition" style="color: var(--slate-600);">Tempestades isoladas</div>
+                    <div id="cityCondition" style="color: var(--slate-600);">Buscando condições atuais...</div>
                   </div>
                   <div class="temp-block">
                     <div id="weatherIcon" class="weather-icon" aria-label="Ícone do clima">⛈️</div>
-                    <div id="tempNumber" class="temp-number">25°</div>
+                    <div id="tempNumber" class="temp-number">--</div>
                   </div>
                 </div>
 
                 <div class="weather-meta">
                   <div class="metric">
                     <span>Sensação</span>
-                    <strong id="realFeel">28°C</strong>
+                    <strong id="realFeel">--</strong>
                   </div>
                   <div class="metric">
                     <span>Umidade</span>
-                    <strong id="humidity">72%</strong>
+                    <strong id="humidity">--</strong>
                   </div>
                   <div class="metric">
                     <span>Chuva</span>
-                    <strong id="rainChance">54%</strong>
+                    <strong id="rainChance">--</strong>
                   </div>
                   <div class="metric">
                     <span>Vento</span>
-                    <strong id="wind">31 km/h</strong>
+                    <strong id="wind">--</strong>
                   </div>
                 </div>
               </div>
 
               <div id="forecast-days" class="forecast-days"></div>
+              <p class="forecast-source" role="status"><span id="forecastStatus">Conectando ao Open-Meteo...</span> <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></p>
+              <section class="weather-assistant" aria-labelledby="assistantTitle">
+                <div class="assistant-heading">
+                  <div>
+                    <p class="eyebrow">Assistente meteorológico</p>
+                    <h3 id="assistantTitle">Pergunte sobre o tempo</h3>
+                  </div>
+                  <span class="assistant-model">IA + dados meteorológicos</span>
+                </div>
+                <div id="assistantMessages" class="assistant-messages" aria-live="polite" aria-relevant="additions"></div>
+                <form id="assistantForm" class="assistant-form">
+                  <label class="sr-only" for="assistantQuestion">Sua pergunta sobre meteorologia</label>
+                  <textarea id="assistantQuestion" maxlength="1000" rows="2" placeholder="Ex.: Vai chover hoje? Como interpretar a umidade e o vento?" required></textarea>
+                  <button id="assistantSubmit" class="btn btn-primary" type="submit">Perguntar</button>
+                </form>
+                <p id="assistantStatus" class="assistant-status" role="status">O assistente requer um servidor Node configurado com a API OpenRouter.</p>
+              </section>
             </div>
           </div>
         </div>
@@ -363,20 +380,20 @@
         <div class="container">
           <div class="section-header">
             <p class="eyebrow">Institucional</p>
-            <h2>Um instituto dedicado à ciência, vigilância e proteção</h2>
+            <h2>Um projeto independente de informação meteorológica</h2>
           </div>
 
           <div class="institutional-grid">
             <div class="institutional-copy">
               <p>
-                O INFM é uma instituição comprometida com a observação, a análise científica e a
-                comunicação de riscos meteorológicos em escala nacional. Nossa missão é fortalecer a
-                resiliência do país por meio de dados confiáveis, alertas oportunos e orientação técnica.
+                O INFM é um projeto independente de divulgação meteorológica. Não é uma instituição
+                do Governo Federal, não representa o INMET e não opera serviços oficiais de vigilância
+                ou emissão de alertas. O conteúdo editorial identifica as fontes consultadas.
               </p>
               <ul class="mission-list">
-                <li>Monitorar a atmosfera com rigor técnico e manutenção de redes observacionais.</li>
-                <li>Produzir alertas e recomendações para reduzir impactos em populações e infraestrutura.</li>
-                <li>Preservar a qualidade da informação meteorológica como ferramenta de planejamento.</li>
+                <li>Explicar fenômenos meteorológicos e contextualizar previsões e dados publicados.</li>
+                <li>Indicar fontes originais para que leitores possam conferir as informações.</li>
+                <li>Divulgar medidas gerais de prevenção e direcionar a alertas oficiais.</li>
               </ul>
             </div>
 
@@ -384,20 +401,20 @@
               <p class="eyebrow" style="color: var(--meteor-blue);">Missão e objetivos</p>
               <div class="objective-box">
                 <div class="objective-item">
-                  <strong>24/7</strong>
-                  <span>Monitoramento</span>
+                  <strong>Open-Meteo</strong>
+                  <span>Fonte da previsão</span>
                 </div>
                 <div class="objective-item">
-                  <strong>12+</strong>
-                  <span>Regiões de atenção</span>
+                  <strong>Editorial</strong>
+                  <span>Notícias e guias</span>
                 </div>
                 <div class="objective-item">
-                  <strong>98%</strong>
-                  <span>Disponibilidade de dados</span>
+                  <strong>Demo</strong>
+                  <span>Alertas e radar</span>
                 </div>
                 <div class="objective-item">
-                  <strong>100%</strong>
-                  <span>Foco em segurança</span>
+                  <strong>Oficiais</strong>
+                  <span>Alertas externos</span>
                 </div>
               </div>
             </div>
@@ -420,11 +437,11 @@
               </div>
               <div>
                 <div style="font-weight: 800; letter-spacing: 0.06em; color: #fff;">INFM</div>
-                <div style="font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.68);">Instituto Nacional Federal de Meteorologia</div>
+                <div style="font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.68);">Projeto independente</div>
               </div>
             </div>
             <p class="footer-copy">
-              Portal institucional para monitoramento meteorológico, alertas severos e suporte técnico à tomada de decisão pública e privada.
+              Projeto independente de informação meteorológica. Não representa o INMET nem órgãos governamentais e não emite alertas oficiais.
             </p>
           </div>
 
@@ -443,21 +460,22 @@
               <li><a href="#alertas">Alertas</a></li>
               <li><a href="#previsao">Previsão</a></li>
               <li><a href="#radar">Radar</a></li>
+              <li><a href="noticias/">Notícias</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
-            <h4>Contato</h4>
+            <h4>Fontes oficiais</h4>
             <ul>
-              <li><span>+55 (61) 0000-0000</span></li>
-              <li><span>contato@infm.gov.br</span></li>
-              <li><span>Brasília, DF</span></li>
+              <li><a href="https://portal.inmet.gov.br/">INMET</a></li>
+              <li><a href="https://www.simepar.br/">Simepar</a></li>
+              <li><a href="https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil">Defesa Civil</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <span>© <span id="currentYear">2026</span> INFM — Instituto Nacional Federal de Meteorologia</span>
+          <span>© <span id="currentYear">2026</span> INFM — projeto independente de meteorologia</span>
           <span>Dados em demonstração para apresentação estática</span>
         </div>
       </div>

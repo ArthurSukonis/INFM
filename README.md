@@ -1,28 +1,35 @@
-# INFM — Instituto Nacional Federal de Meteorologia
+# INFM — Portal independente de informação meteorológica
 
-Site institucional estático em HTML5, CSS3 e JavaScript puro, pronto para publicação no GitHub Pages.
+Projeto independente em HTML5, CSS3, JavaScript puro e um backend Node.js pequeno para previsão meteorológica e integração segura com OpenRouter. O INFM não é órgão do Governo Federal e não representa o INMET.
 
 ## Conteúdo
-- Página inicial institucional e apresentação do INFM
-- Central de alertas por severidade
-- Previsão do tempo por cidade
+- Página inicial e notícias meteorológicas com fontes identificadas
+- Alertas, radar e monitoramento severo em modo demonstrativo
+- Previsão atual e para cinco dias por cidade, via Open-Meteo
+- Assistente meteorológico contextual via OpenRouter
 - Painel de radar meteorológico em demonstração
 - Monitoramento de eventos severos
 - Mapa do Brasil com estados selecionáveis
-- Rodapé institucional
 
-## Publicação no GitHub Pages
-1. Faça o push do projeto para um repositório GitHub.
-2. No repositório, abra Settings → Pages.
-3. Em Source, selecione Deploy from a branch.
-4. Escolha a branch principal (por exemplo, `main`) e a pasta raiz (`/`).
-5. Salve e aguarde o processo de publicação.
-6. O site ficará disponível em algo como: https://seu-usuario.github.io/seu-repositorio/
+## Execução local
+Requer Node.js 20 ou superior. A previsão usa a API pública do Open-Meteo; o assistente também requer uma chave OpenRouter:
+
+```sh
+export OPENROUTER_API_KEY="sua-chave-nova"
+npm start
+```
+
+Acesse http://localhost:3000. Opcionalmente, defina `OPENROUTER_MODEL` (padrão: `openai/gpt-4o-mini`) e `PORT`. Nunca coloque a chave em `script.js`, HTML ou em variáveis públicas do frontend.
+
+## Publicação
+O GitHub Pages hospeda arquivos estáticos. A previsão por cidade consulta Open-Meteo diretamente no navegador quando o endpoint Node não está disponível; o assistente de IA requer um host que execute Node.js e a variável secreta `OPENROUTER_API_KEY`. Opcionalmente, configure `PUBLIC_SITE_URL` nesse serviço. Nunca publique a chave no repositório.
+
+Se uma chave real foi compartilhada em conversa, revogue-a no OpenRouter e gere outra antes de configurar o servidor.
 
 ## Arquivos principais
 - index.html
 - style.css
 - script.js
 
-## Observação
-Os dados meteorológicos desta versão são demonstrativos; não são oficiais nem atualizados em tempo real. As preferências de cidade, filtro, estado, camada e zoom ficam salvas localmente no navegador e não são sincronizadas com outros dispositivos.
+## Dados e limitações
+Previsão e dados atuais são obtidos do Open-Meteo e não substituem fontes oficiais. O assistente interpreta esses dados, mas não emite alertas oficiais. Alertas, radar, mapa e monitoramento severo permanecem demonstrativos. As consultas têm limites básicos por endereço IP; para uso público em escala, configure também controles de acesso e limites no provedor de hospedagem/OpenRouter. As preferências continuam salvas somente no navegador.

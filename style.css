@@ -775,6 +775,118 @@ p {
   gap: 12px;
 }
 
+.forecast-source {
+  margin: 0;
+  color: var(--slate-600);
+  font-size: 0.82rem;
+}
+
+.forecast-source a {
+  color: var(--meteor-blue);
+  text-decoration: underline;
+}
+
+.weather-assistant {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid rgba(116, 147, 186, 0.2);
+  border-radius: 18px;
+}
+
+.assistant-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+}
+
+.assistant-heading .eyebrow {
+  margin-bottom: 6px;
+}
+
+.assistant-heading h3 {
+  margin-bottom: 14px;
+  color: var(--navy-900);
+}
+
+.assistant-model {
+  color: var(--slate-600);
+  font-size: 0.78rem;
+}
+
+.assistant-messages {
+  display: grid;
+  gap: 10px;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.assistant-message {
+  width: fit-content;
+  max-width: min(90%, 680px);
+  margin: 0;
+  padding: 10px 13px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+}
+
+.assistant-message.user {
+  justify-self: end;
+  background: #e6f2ff;
+  color: var(--navy-900);
+}
+
+.assistant-message.assistant {
+  justify-self: start;
+  background: #eff7f3;
+  color: var(--navy-900);
+}
+
+.assistant-form {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.assistant-form textarea {
+  flex: 1;
+  min-width: 0;
+  resize: vertical;
+  padding: 11px 13px;
+  color: var(--navy-900);
+  background: #f8fafc;
+  border: 1px solid #cbd7e2;
+  border-radius: 10px;
+}
+
+.assistant-form .btn {
+  flex: 0 0 auto;
+}
+
+.assistant-form .btn:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.assistant-status {
+  margin: 10px 0 0;
+  color: var(--slate-600);
+  font-size: 0.82rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .day-card {
   padding: 18px 14px;
   background: rgba(255,255,255,0.96);
@@ -1285,6 +1397,12 @@ p {
   .header-actions {
     width: 100%;
     justify-content: flex-end;
+  }
+
+  .assistant-heading,
+  .assistant-form {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .quick-grid,
